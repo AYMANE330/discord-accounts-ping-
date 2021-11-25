@@ -7,4 +7,4 @@ location.reload();
 }, 2500);
 }
 
-login('ODc1NDQ5NDczNDQxMTAzODky.YRVuHw.aNmCtCgIq4Yrwt9-mxBJanJ5620')
+login('TOKEN')
