@@ -35,6 +35,6 @@ go to [uptime](https://uptimerobot.com) make an account,click Add New Monitor th
 <!-- CONTACT -->
 ## Contact
 
-FooxCoder - [@fooxcoder](https://twitter.com/fooxcoder)
+twiter - [@fooxcoder](https://twitter.com/fooxcoder)
 
 Project Link: [https://github.com/aymane330/discord-accounts-ping-](https://github.com/aymane330/discord-accounts-ping-)
