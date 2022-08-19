@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const Discord = require('discord.js');
 
 app.listen(() => console.log("Server started"));
 
@@ -8,9 +9,7 @@ app.use('/ping', (req, res) => {
 });
 
 
-const Discord = require('discord.js');
-const tokens =[//DIR tokens hna entre 'TOKEN','TOKEN'
-];
+const tokens =["TOKENS","TOKENS"];
 
 
 console.log('Total tokens',tokens.length);
@@ -23,16 +22,23 @@ for(let i=0;i<tokens.length;i++){
 for(let i=0;i<tokens.length;i++){
 
   clients[i].on('ready',async () => {
-    console.log("Starting..");
-    let g = clients[i].guilds.get(//id server entre "ID SERVER"); 
-    let c = g.channels.get(//id channel entre "ID CHANNEL");
-    if(c.type === 'voice') {
-      c.join();
+    console.log("Starting...");
+    let Server = clients[i].guilds.get("SERVER ID"); 
+    let Channel = Server.channels.get("CHANNELS ID");
+
+
+    if(Channel.type === 'voice') 
+    {
+      Channel.join();
       setInterval(() => {
-        if(g.me.voiceChannel && g.me.voiceChannelID !== c.id || !g.me.voiceChannel) c.join();
+        if(Server.me.voiceChannel && Server.me.voiceChannelID !== Channel.id || !Server.me.voiceChannel)
+        {
+          Channel.join();
+        } 
+        
       }, 1);
     } else {
-      console.log('Failed To Join: \n The Channel Type isn "Listening."')
+      console.log('Failed To Join The Channel')
     }
   });
   clients[i].login(tokens[i]);
